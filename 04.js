@@ -13,9 +13,26 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  let str = num.toString();
+let arr = Array.from(str);
+let reverseArr = [];
+let size= arr.length -1;
 
+for(let i=size; i> -1 ;i--) {
+  reverseArr.push(arr[i]);
+}
+
+
+for (let i=0; i<arr.length;i++ ) {
+  if (!(reverseArr[i]===arr[i])){
+    return false; 
+  } }
+
+
+return true;
 }
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = numeroSimetrico
+
